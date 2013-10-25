@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+    <title xml:lang="ko">더미모듈</title>
+    <title xml:lang="en">dummy</title>
+    <description xml:lang="ko">더미모듈입니다.</description>
+    <description xml:lang="en">This is dummy module.</description>
+    <version>0.1</version>
+    <date>2013-10-25</date>
+    <category>content</category>
+
+    <author email_address="changeme@example.com" link="http://example.com/">
+        <name xml:lang="ko">changeme</name>
+        <name xml:lang="en">changeme</name>
+    </author>
+</module>
