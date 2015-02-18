@@ -4,8 +4,8 @@
     <title xml:lang="en">dummy</title>
     <description xml:lang="ko">더미모듈입니다.</description>
     <description xml:lang="en">This is dummy module.</description>
-    <version>0.1</version>
-    <date>2013-10-25</date>
+    <version>0.2</version>
+    <date>2015-02-17</date>
     <category>content</category>
 
     <author email_address="changeme@example.com" link="http://example.com/">

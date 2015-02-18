@@ -1,0 +1,51 @@
+<!--#include("./header.html")-->
+<div cond="$XE_VALIDATOR_MESSAGE" class="message {$XE_VALIDATOR_MESSAGE_TYPE}">
+    <p>{$XE_VALIDATOR_MESSAGE}</p>
+</div>
+<p></p>
+
+<section class="section">
+    <h1>설정</h1>
+    <form action="./" method="post" id="fo_point" class="x_form-horizontal">
+        <input type="hidden" name="module" value="dummy" />  
+        <input type="hidden" name="act" value="procDummyAdminInsertConfig" />
+        
+        <div class="x_control-group">
+            <label class="x_control-label" for="goal">주소</label>
+            <div class="x_controls">
+                <span class="g11n x_input-append">
+                    <input type="text" disabled="yes" value="{getUrl('', 'act', 'dispDummyIndex') }">
+                </span>
+                <a href="#location_help" class="x_icon-question-sign" data-toggle>{$lang->help}</a>
+                <p id="location_help" class="x_help-block" hidden>모듈 인덱스 주소입니다. 메뉴에 바로가기로 등록시켜 사용하시기 바랍니다.</p>
+            </div>
+        </div>
+
+        <div class="x_control-group">
+            <label class="x_control-label" for="layout_srl">{$lang->layout}</label>
+            <div class="x_controls">
+                <select name="layout_srl" id="layout_srl">
+                    <option value="0">{$lang->notuse}</option>
+                    <option loop="$layout_list => $key, $val" value="{$val->layout_srl}" selected="selected"|cond="$config->layout_srl== $val->layout_srl">{$val->title} ({$val->layout})</option>
+                </select>
+                <a href="#layout_help" class="x_icon-question-sign" data-toggle>{$lang->help}</a>
+                <p id="layout_help" class="x_help-block" hidden>모듈에서 사용할 레이아웃을 선택합니다.</p>
+            </div>
+        </div>
+
+        <div class="x_control-group">
+            <label class="x_control-label" for="skin">{$lang->skin}</label>
+            <div class="x_controls">
+                <select name="skin" id="skin" style="width:auto">
+                    <option loop="$skin_list=> $key, $val" value="{$key}" selected="selected"|cond="$module_info->skin== $key">{$val->title}</option>
+                </select>
+                <a href="#skin_help" class="x_icon-question-sign" data-toggle>{$lang->help}</a>
+                <p id="skin_help" class="x_help-block" hidden>모듈에서 사용할 스킨을 선택합니다.</p>
+            </div>
+        </div>
+        
+        <div class="x_clearfix">
+            <span class="x_pull-right"><input class="x_btn x_btn-primary" type="submit" value="{$lang->cmd_registration}" /></span>
+        </div>
+    </form>
+</section>

@@ -5,6 +5,9 @@
 	<permissions>
 	</permissions>
 	<actions>
+		<action name="dispDummyIndex" type="view" index="true"/>
+		
+		<action name="dispDummyAdminConfig" type="view" admin_index="true"/>
 	</actions>
 	<menus>
 	</menus>
